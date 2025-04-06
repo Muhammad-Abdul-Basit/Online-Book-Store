@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import java.util.Set;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.jpa.repository.JpaRepository;
 @Getter
 @Setter
 @Entity
