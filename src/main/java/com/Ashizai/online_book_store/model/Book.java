@@ -16,7 +16,7 @@ public class Book
     private int Publication_year;
     private float Price;
     private short Quantity;
-    @ManyToMany
+    @ManyToMany//Author and Book
     @JoinTable
             (
                     name = "book_author",
@@ -24,7 +24,7 @@ public class Book
                     inverseJoinColumns = @JoinColumn(name = "author_id")
             )
     private Set <Author> authors;
-    @ManyToMany
+    @ManyToMany//BookGenre and Book
     @JoinTable
             (
                     name="book_genre",
@@ -32,7 +32,7 @@ public class Book
                     inverseJoinColumns =@JoinColumn(name = "genre_ID")
             )
     private Set <BookGenre> genres;
-    @ManyToMany
+    @ManyToMany//Book_customer and Book
     @JoinTable
             (
                     name = "book_customer",
