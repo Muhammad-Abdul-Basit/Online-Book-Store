@@ -9,7 +9,4 @@ public interface BookRepository extends JpaRepository <Book, String>
     List<Book>findByTitle(String Title);
     List<Book>findByPublication_year(int Publication_year);
     List<Book> findByTitleAndPublication_year(String Title, int Publication_year);
-    List<Book>findByTitleAndQuantity(String Title,short Quantity);
-    List<Book>findByQuantity(short Quantity);
-    List<Book>findByTitleAndPrice(String Title, float Price);
 }
