@@ -6,11 +6,11 @@ import java.util.List;
 @Repository
 public interface BookRepository extends JpaRepository <Book, String>
 {
-    List<Book>findByTitle(String Title);
-    List<Book>findByPublication_year(int Publication_year);
-    List<Book>findByAuthorId(String authorId);
-    List<Book>findByAuthorName(String Name);
+    List<Book>findBookByTitle(String Title);;
+    List<Book>findBookByPublication_year(int publicationYear);
+    List<Book>findBooksByAuthorId(String author_Id);
+    List<Book>findBookByAuthorName(String authorName);
     List<Book>findBooksByGenreID(short Genre_Id);
-    List<Book> findBooksByGenreName(String GenreName);
+    List<Book>findBooksByGenreName(String GenreName);
     List<Book> findByTitleAndPublication_year(String Title, int Publication_year);
 }

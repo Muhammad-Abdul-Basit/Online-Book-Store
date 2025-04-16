@@ -7,6 +7,6 @@ public interface BookOrderService
     BookOrder saveBookOrder(BookOrder bookOrder);
     void deleteBookOrder(BookOrder bookOrder);
     BookOrder findByOrderID(String orderId);
-    List<BookOrder>getAllOrder();
+    List<BookOrder>getAllOrders();
     List<BookOrder>findByOrderDate(LocalDate orderDate);
 }
