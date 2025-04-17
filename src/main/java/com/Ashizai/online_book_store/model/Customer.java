@@ -10,6 +10,7 @@ import lombok.Setter;
 @Table(name = "customer")
 public class Customer
 {
+
     @Id
     @Column(name = "customer_ID")
     private String customerId;
