@@ -5,7 +5,7 @@ import com.Ashizai.online_book_store.model.BookOrder;
 public interface BookOrderService
 {
     BookOrder saveBookOrder(BookOrder bookOrder);
-    void deleteBookOrder(BookOrder bookOrder);
+    void deleteBookOrderById(String orderId);
     BookOrder findByOrderID(String orderId);
     List<BookOrder>getAllOrders();
     List<BookOrder>findByOrderDate(LocalDate orderDate);

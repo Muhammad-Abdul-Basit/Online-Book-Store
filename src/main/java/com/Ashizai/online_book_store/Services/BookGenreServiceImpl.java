@@ -21,9 +21,9 @@ public class BookGenreServiceImpl implements BookGenreService
         return bookGenreRepository.save(bookGenre);
     }
     @Override
-    public void deleteBookGenre(BookGenre bookGenre)
+    public void deleteBookGenreById(short BookGenreId)
     {
-        bookGenreRepository.delete(bookGenre);
+        bookGenreRepository.deleteById(BookGenreId);
     }
     @Override
     public List<BookGenre>getAllBookGenre()

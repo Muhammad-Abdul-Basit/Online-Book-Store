@@ -4,7 +4,7 @@ import com.Ashizai.online_book_store.model.Book;
 public interface BookService
 {
     Book saveBook(Book book);
-    void deleteBook(Book book);
+    void deleteBookbyIsbn(String isbn);
     Book getBookByISBN(String Isbn);
     List<Book>findBookByTitle(String Title);
     List<Book>findBookByPublication_year(int publicationYear);

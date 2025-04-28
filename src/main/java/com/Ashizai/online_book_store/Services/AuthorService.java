@@ -6,7 +6,7 @@ import com.Ashizai.online_book_store.model.Book;
 public interface AuthorService
 {
     Author saveAuthor(Author author);
-    void deleteAuthor(Author author);
+    void deleteAuthorById(String authorId);
     Author getAuthorByAuthorID(String authorID);
     List<Author>findByName(String authorName);
     List<Author>getAllAuthors();

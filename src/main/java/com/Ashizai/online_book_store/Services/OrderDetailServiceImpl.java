@@ -17,14 +17,14 @@ public class OrderDetailServiceImpl implements OrderDetailService
         this.orderDetailRepository=orderDetailRepository;
     }
     @Override
-    public OrderDetail saveBookOrder(OrderDetail orderDetail)
+    public OrderDetail saveOrderDetail(OrderDetail orderDetail)
     {
-        return orderDetailRepository.save(orderDetail);
+       return orderDetailRepository.save(orderDetail);
     }
-    @Override
-    public void deleteOrderDetail(OrderDetail orderDetail)
+   @Override
+   public void deleteOrderDetailById(int orderDetailId)
     {
-        orderDetailRepository.delete(orderDetail);
+       orderDetailRepository.deleteById(orderDetailId);
     }
     @Override
     public List<OrderDetail>getAllOrderDetail()
@@ -32,9 +32,9 @@ public class OrderDetailServiceImpl implements OrderDetailService
         return orderDetailRepository.findAll();
     }
     @Override
-    public OrderDetail getOrderDetailById(int i)
+    public OrderDetail getOrderDetailById(int orderDetailId)
     {
-        Optional<OrderDetail> orderDetail=orderDetailRepository.findById(i);
+        Optional<OrderDetail> orderDetail=orderDetailRepository.findById(orderDetailId);
         return orderDetail.orElse(null);
     }
 }

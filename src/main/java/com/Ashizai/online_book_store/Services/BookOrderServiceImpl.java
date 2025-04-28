@@ -23,9 +23,9 @@ public class BookOrderServiceImpl implements BookOrderService
         return bookOrderRepository.save(bookOrder);
     }
     @Override
-    public void deleteBookOrder(BookOrder bookOrder)
+    public void deleteBookOrderById(String orderId)
     {
-        bookOrderRepository.delete(bookOrder);
+        bookOrderRepository.deleteById(orderId);
     }
     @Override
     public BookOrder findByOrderID(String orderId)
